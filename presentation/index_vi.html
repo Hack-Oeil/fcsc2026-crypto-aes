@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Thử thách #599</h3>
+                            <h2 class="section-title">GoodAES</h2>
+                            <p>
+Tiêu chuẩn AES (Advanced Encryption Standard) đã được sử dụng từ khi ra đời trong hàng chục tỷ sản phẩm. Thuật toán mã hóa đối xứng này được tìm thấy trong máy tính, điện thoại, ô tô, đồng hồ… Nó được sử dụng để bảo vệ mọi loại dữ liệu trong nhiều ngữ cảnh khác nhau.<br /><br />Do đó, việc biết cách sử dụng nó để mã hóa hoặc giải mã dữ liệu là vô cùng quan trọng. Đây là một <em>flag</em> được mã hóa bằng AES-128 ở chế độ CBC, hãy giải mã nó.
+                            </p>
+                            <h4>Tệp cần nghiên cứu:</h4>
+                            <p>../files/good-aes.py</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                Liên kết chính thức:
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/crypto/fcsc2026-crypto-aes/">https://hackropole.fr/fr/challenges/crypto/fcsc2026-crypto-aes/</a>
+                                <br />
+                                Tác giả: ElyKar
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Học tập</h3>
+                            <h2 class="section-title">Tài liệu và Video</h2>
+                            <p class="section-subtitle">
+                                Chưa có tài liệu nào vào lúc này
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Trợ giúp</h3>
+                            <h2 class="section-title">Lời khuyên và gợi ý</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Luồng trên Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="Cuộn lên đầu trang" title="Trở về đầu trang"></a>
+    </div>
+</body>
+
+</html>
