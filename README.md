@@ -1,4 +1,4 @@
-# FCSC 2025 GoodAES
+# FCSC 2026 GoodAES
 
 Le standard AES (Advanced Encryption Standard) est utilisé depuis sa conception dans dizaines de milliards de produits. Cet algorithme de chiffrement symétrique se trouve dans les ordinateurs, téléphones, voitures, montres… Il est utilisé pour protéger des données de toutes sortes, dans des contextes variés.
 
